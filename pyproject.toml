@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "DaysLeftExam"
+version = "0.2.0"
+description = ""
+authors = ["Lonely-Dark <vlad10game@gmail.com>"]
+readme = "README.md"
+packages = [{include = "DaysLeftExam"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+helperclass-pack = {git = "https://github.com/Lonely-Dark/helperclass-pack"}
+aiohttp = "^3.8.4"
+coloredlogs = "^15.0.1"
+python-dotenv = "^1.0.0"
+aioschedule = "^0.5.2"
+loguru = "^0.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

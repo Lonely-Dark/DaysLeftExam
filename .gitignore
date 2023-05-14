@@ -1,0 +1,8 @@
+# Ignore IDEA
+.idea
+
+# Ignore poetry lock
+poetry.lock
+
+# Ignore env
+.env
