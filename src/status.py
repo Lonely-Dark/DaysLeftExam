@@ -43,14 +43,13 @@ class MyVk:
 async def main():
     my_vk = MyVk()
 
-    while True:
-        today = datetime.date.today()
-        future = datetime.date(2023, 5, 14)
-        diff = (future - today).days
+    today = datetime.date.today()
+    future = datetime.date(2023, 5, 14)
+    diff = (future - today).days
 
-        text = f"Дней до ЕГЭ: {diff}"
+    text = f"Дней до ЕГЭ: {diff}"
 
-        status = await my_vk.set_status(text)
+    status = await my_vk.set_status(text)
 
 
 if __name__ == '__main__':
