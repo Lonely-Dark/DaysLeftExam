@@ -6,6 +6,7 @@
 
 import asyncio
 import os
+import random
 import time
 import datetime
 
@@ -39,6 +40,14 @@ class MyVk:
             data = loads(await response.text())
             self.logger.debug(data)
 
+    async def send_message(self, peer_id, message):
+        url = 'https://api.vk.com/method/messages.send'
+        params = {'access_token': self.token, 'v': '5.131', 'peer_id': peer_id, 'message': message,
+                  'random_id': random.randint(0, 100000)}
+        async with self.session.post(url, data=params) as response:
+            data = loads(await response.text())
+            self.logger.debug(data)
+
 
 async def main():
     my_vk = MyVk()
@@ -47,9 +56,10 @@ async def main():
     future = datetime.date(2023, 5, 29)
     diff = (future - today).days
 
-    text = f"Дней до ЕГЭ: {diff}"
+    text = f"Дней до ЕГЭ по русскому языку: {diff}"
 
     status = await my_vk.set_status(text)
+    chat = await my_vk.send_message(peer_id=2000000000 + 206, message=text)
 
 
 if __name__ == '__main__':
