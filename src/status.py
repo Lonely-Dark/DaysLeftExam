@@ -44,7 +44,7 @@ async def main():
     my_vk = MyVk()
 
     today = datetime.date.today()
-    future = datetime.date(2023, 5, 14)
+    future = datetime.date(2023, 5, 29)
     diff = (future - today).days
 
     text = f"Дней до ЕГЭ: {diff}"
