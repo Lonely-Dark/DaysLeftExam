@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "DaysLeftExam"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9.2"
 helperclass-pack = {git = "https://github.com/Lonely-Dark/helperclass-pack"}
 aiohttp = "^3.8.4"
 coloredlogs = "^15.0.1"
