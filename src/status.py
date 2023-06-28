@@ -56,10 +56,9 @@ async def main():
     future = datetime.date(2023, 5, 29)
     diff = (future - today).days
 
-    text = f"Дней до ЕГЭ по русскому языку: {diff}"
+    text = f"Дней до ... : {diff}"
 
     status = await my_vk.set_status(text)
-    # chat = await my_vk.send_message(peer_id=2000000000 + 206, message=text)
 
 
 if __name__ == '__main__':
